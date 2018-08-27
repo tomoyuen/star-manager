@@ -1,0 +1,29 @@
+{
+  "name": "star-manager",
+  "version": "0.0.1",
+  "description": "A tool for Github star management.",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^2.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomoyuen/star-manager.git"
+  },
+  "keywords": [
+    "Github",
+    "Star",
+    "Electron",
+    "React"
+  ],
+  "author": "tomoyuen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tomoyuen/star-manager/issues"
+  },
+  "homepage": "https://github.com/tomoyuen/star-manager#readme"
+}
