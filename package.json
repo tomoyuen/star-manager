@@ -4,12 +4,23 @@
   "description": "A tool for Github star management.",
   "main": "main.js",
   "dependencies": {
-    "electron": "^2.0.8"
+    "electron": "^2.0.8",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
     "concurrently": "^4.0.1",
     "cross-env": "^5.2.0",
-    "parcel-bundler": "^1.9.7"
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "parcel-bundler": "^1.9.7",
+    "parcel-plugin-eslint": "^1.0.4"
   },
   "scripts": {
     "start": "concurrently --kill-others \"npm:dev\" \"npm:electron:dev\"",
