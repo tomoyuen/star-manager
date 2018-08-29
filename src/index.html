@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Security-Policy" content="script-src * data: ws://localhost 'unsafe-inline' 'unsafe-eval'">
   <title>Star Manager</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <div id="app"></div>
   <script>
-    require('./renderer.js');
+    require('../dist/renderer.js');
   </script>
 </body>
 </html>
