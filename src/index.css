@@ -1,6 +1,14 @@
 body {
   h1 {
-    color: blue;
+    color: black;
     font-size: 24px;
+  }
+  
+  p {
+    color: red;
+  }
+
+  h2 {
+    color: red;
   }
 }

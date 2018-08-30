@@ -1,6 +1,8 @@
 {
   "modules": false,
   "plugins": {
+    "stylelint": true,
+    "postcss-reporter": true,
     "postcss-utils": true,
     "postcss-cssnext": true,
     "postcss-nested": true
