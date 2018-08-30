@@ -1,13 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-
-class App extends Component {
-  render() {
-    return (
-      <h1>Hello World</h1>
-    );
-  }
-}
+import App from './containers/app';
 
 render(
   <App />,
@@ -18,4 +11,8 @@ render(
 // Hot Module Replacement
 if (module.hot) {
   module.hot.accept();
+}
+
+if (process.env.NODE_ENV === 'development') {
+  require('electron-react-devtools').install();
 }
