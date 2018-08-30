@@ -10,8 +10,11 @@ function createWindow() {
     width: 800,
     height: 600,
   });
-  mainWindow.loadFile('./src/index.html');
-  mainWindow.webContents.openDevTools();
+  mainWindow.loadFile('./dist/index.html');
+
+  if (process.env.debug) {
+    mainWindow.webContents.openDevTools();
+  }
 
   mainWindow.on('closed', () => {
     mainWindow = null;

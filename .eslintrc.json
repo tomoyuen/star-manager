@@ -8,6 +8,14 @@
         "node": true,
         "browser": true
     },
+    "rules": {
+      "react/prefer-stateless-function": [
+        1,
+        {
+          "ignorePureComponents": false
+        }
+      ]
+    },
     "plugins": ["react", "jsx-a11y"],
     "extends": ["airbnb"]
 }

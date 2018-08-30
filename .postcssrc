@@ -1,0 +1,8 @@
+{
+  "modules": false,
+  "plugins": {
+    "postcss-utils": true,
+    "postcss-cssnext": true,
+    "postcss-nested": true
+  }
+}
