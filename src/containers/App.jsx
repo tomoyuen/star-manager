@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Provider } from 'mobx-react';
+import { observable } from 'mobx';
+import { Provider, observer } from 'mobx-react';
 
 import stores from 'stores';
 import Button from 'components/Button';

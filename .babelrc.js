@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     'babel-polyfill',
     'transform-class-properties',
+    'transform-decorators-legacy',
     ['module-resolver', {
       alias: project.alias
     }]
