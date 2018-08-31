@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class Button extends Component {
+class Button extends Component {
   static propTypes = {
     message: PropTypes.string,
   }
@@ -14,3 +14,5 @@ export default class Button extends Component {
     );
   }
 }
+
+export default Button;
