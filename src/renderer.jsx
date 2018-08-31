@@ -1,5 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+/* eslint import/no-extraneous-dependencies: off */
+import ReactDevtools from 'electron-react-devtools';
+
 import App from 'containers/App.jsx';
 
 render(
@@ -13,6 +16,6 @@ if (module.hot) {
   module.hot.accept();
 }
 
-if (process.env.NODE_ENV === 'development') {
-  require('electron-react-devtools').install();
+if (process.env.TARGET === 'electron') {
+  ReactDevtools.install();
 }

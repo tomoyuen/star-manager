@@ -9,8 +9,13 @@ A tool for Github star management.
 ## How to start develop?
 1. `git@github.com:tomoyuen/star-manager.git`
 2. `cd star-manager && npm install`
-3. `npm start`
+3. `npm run dev`
 
 **Want to start electron console?**
 
-run `npm run debug`
+`npm run debug`
+
+
+**Want to develop in the browser?**
+
+`npm start`

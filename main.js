@@ -12,7 +12,7 @@ function createWindow() {
   });
   mainWindow.loadFile('./dist/index.html');
 
-  if (process.env.debug) {
+  if (process.env.DEBUG) {
     mainWindow.webContents.openDevTools();
   }
 

@@ -36,11 +36,12 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"npm:dev\" \"npm:electron:dev\"",
-    "debug": "concurrently --kill-others \"npm:dev\" \"npm:electron:debug\"",
-    "dev": "parcel --target electron --public-url ./ ./src/index.html",
-    "electron:dev": "cross-env NODE_ENV=development electron .",
-    "electron:debug": "cross-env NODE_ENV=development debug=1 electron ."
+    "start": "parcel ./src/index.html --log-level 3",
+    "dev": "concurrently --kill-others \"npm:develop\" \"npm:electron:dev\"",
+    "debug": "concurrently --kill-others \"npm:develop\" \"npm:electron:debug\"",
+    "develop": "parcel ./src/index.html --log-level 3 --target electron --public-url ./",
+    "electron:dev": "cross-env NODE_ENV=development TARGET=electron electron .",
+    "electron:debug": "cross-env NODE_ENV=development DEBUG=1 TARGET=electron electron ."
   },
   "repository": {
     "type": "git",
