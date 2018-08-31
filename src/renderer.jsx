@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { observable, action } from 'mobx';
-import { observer } from 'mobx-react';
-
-import App from 'containers/App.jsx';
-import { app } from 'electron';
+import { observer, PropTypes } from 'mobx-react';
 
 // https://mobx.js.org/intro/overview.html
 
@@ -12,30 +9,42 @@ const appState = observable({
   timer: 0,
 });
 
-@observer
-class TimerView extends Component {
-  render() {
-    return (
-      <button onClick={() => this.onReset()}>
-        Seconds passed: {this.props.appState.timer}
-      </button>
-    )
+@observer class TimerView extends Component {
+  static propTypes = {
+    state: PropTypes.observableObject,
   }
+
+  static defaultProps = {
+    state: {},
+  }
+
   onReset() {
-    this.props.appState.resetTimer();
+    const { state } = this.props;
+    state.resetTimer();
+  }
+
+  render() {
+    const { state } = this.props;
+    const { timer } = state;
+    return (
+      <button type="button" onClick={() => this.onReset()}>
+        Seconds passed:
+        { timer }
+      </button>
+    );
   }
 }
 
-setInterval(action(function tick() {
+setInterval(action(() => {
   appState.timer += 1;
 }), 1000);
 
-appState.resetTimer = action(function reset() {
+appState.resetTimer = action(() => {
   appState.timer = 0;
 });
 
 render(
-  <TimerView appState={appState} />,
+  <TimerView state={appState} />,
   document.getElementById('app'),
 );
 
@@ -46,6 +55,6 @@ if (module.hot) {
 }
 
 if (process.env.TARGET === 'electron') {
-  /* eslint global-require: off */
+  /* eslint global-require: off, import/no-extraneous-dependencies: off */
   require('electron-react-devtools').install();
 }
