@@ -1,0 +1,10 @@
+{
+  "modules": false,
+  "plugins": {
+    "stylelint": true,
+    "postcss-reporter": true,
+    "postcss-utils": true,
+    "postcss-preset-env": true,
+    "postcss-nested": true
+  }
+}
