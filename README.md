@@ -2,8 +2,8 @@
 A tool for Github star management.
 
 ## Features
-- [cssnext](http://cssnext.io/) syntax support
-- React + Mobx
+- [postcss-preset-env](https://preset-env.cssdb.org/) syntax support
+- React + [Mobx](https://mobx.js.org/index.html)
 - HMR support
 
 ## How to start develop?
