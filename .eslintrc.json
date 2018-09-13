@@ -20,7 +20,8 @@
         {
           "ignorePureComponents": false
         }
-      ]
+      ],
+      "no-trailing-spaces": 0
     },
     "plugins": ["react", "jsx-a11y"],
     "extends": ["airbnb"]
