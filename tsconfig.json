@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
     "jsx": "react",
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "node",
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
-  }
+    "lib": ["dom", "es2015"],
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strict": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
