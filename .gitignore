@@ -63,3 +63,6 @@ typings/
 # parcel build cache
 dist
 .cache
+
+# vscode project
+.vscode
