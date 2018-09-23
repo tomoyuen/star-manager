@@ -12,9 +12,17 @@ interface TodoListProps {
 @inject('todoStore')
 @observer
 class TodoList extends React.Component<TodoListProps> {
-  getListItems = () => {
+  achieveItem(todo: Todo) {
+    this.props.todoStore!.completeTodo(todo);
+  }
+  getListItems() {
     return this.props.todoStore!.
-      todoList.map((todo: Todo, idx: number) => <TodoListItem key={idx} todo={todo} />);
+      todoList.map((todo: Todo, idx: number) => (
+      <TodoListItem
+        key={idx}
+        todo={todo}
+        onClick={() => this.achieveItem(todo)}
+      />));
   }
 
   render() {

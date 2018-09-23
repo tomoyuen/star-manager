@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Provider } from 'mobx-react';
+import { Provider, observer } from 'mobx-react';
 
 import { TodoStore } from '../stores/todo.store';
 
 import { TodoAdd } from './todo.add';
 import { TodoList } from './todo.list';
+import { TodoStatus } from './todo.status';
 
 export class App extends React.Component {
   private todoStore: TodoStore = new TodoStore();
@@ -12,10 +13,12 @@ export class App extends React.Component {
   render() {
     return (
       <Provider todoStore={this.todoStore}>
-        <div>
+        <>
           <TodoAdd />
           <TodoList />
-        </div>
+          <hr/>
+          <TodoStatus />
+        </>
       </Provider>
     );
   }
