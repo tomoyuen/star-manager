@@ -1,11 +1,8 @@
-/**
- * https://github.com/electron/electron-quick-start
- */
-const { app, BrowserWindow } = require('electron');
+import { app, BrowserWindow } from 'electron';
 
-let mainWindow;
+let mainWindow: BrowserWindow | null;
 
-function createWindow() {
+function createWindow(): void {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -23,8 +20,14 @@ function createWindow() {
 
 app.on('ready', createWindow);
 
-app.on('window-all-closed', () => {
+app.on('window-all-closed', (): void => {
   if (process.platform !== 'darwin') {
     app.quit();
+  }
+});
+
+app.on('activate', (): void => {
+  if (mainWindow === null) {
+    createWindow();
   }
 });

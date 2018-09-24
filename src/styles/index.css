@@ -11,4 +11,8 @@ body {
   h2 {
     color: red;
   }
+
+  .achieved {
+    text-decoration: line-through;
+  }
 }
