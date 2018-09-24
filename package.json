@@ -35,6 +35,19 @@
     "tslint-react": "^3.6.0",
     "typescript": "^3.0.3"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
+  },
   "scripts": {
     "start": "parcel ./src/index.html --log-level 3",
     "dev": "concurrently --kill-others \"npm:develop\" \"npm:electron:dev\"",
@@ -71,5 +84,9 @@
   "bugs": {
     "url": "https://github.com/tomoyuen/star-manager/issues"
   },
-  "homepage": "https://github.com/tomoyuen/star-manager#readme"
+  "homepage": "https://github.com/tomoyuen/star-manager#readme",
+  "engines": {
+    "node": ">= 8.11.0",
+    "npm": ">= 6.0.0"
+  }
 }
