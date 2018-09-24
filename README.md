@@ -1,4 +1,4 @@
-# star-manager
+# star-manager  [![Build Status][travis-img]][travis]
 A tool for Github star management.
 
 ## Features
