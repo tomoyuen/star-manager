@@ -19,3 +19,6 @@ A tool for Github star management.
 **Want to develop in the browser?**
 
 `npm start`
+
+[travis-img]: https://travis-ci.org/tomoyuen/star-manager.svg
+[travis]: https://travis-ci.org/tomoyuen/star-manager
