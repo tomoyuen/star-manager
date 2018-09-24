@@ -27,7 +27,7 @@ class TodoList extends React.Component<TodoListProps> {
 
   render() {
     return (
-      <ol>{this.getListItems()}</ol>
+      <ol data-testid="todo-list">{this.getListItems()}</ol>
     );
   }
 }

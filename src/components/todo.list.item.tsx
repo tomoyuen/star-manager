@@ -12,5 +12,5 @@ export const TodoListItem = observer(({
   todo,
   ...props
 }: TodoListItemProps) => (
-  <li className={todo.isComplete ? 'achieved' : ''} {...props}>{todo.task + todo.isComplete}</li>
+  <li className={todo.isComplete ? 'achieved' : ''} {...props}>{todo.task}</li>
 ));

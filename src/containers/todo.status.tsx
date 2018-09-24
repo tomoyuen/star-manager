@@ -8,6 +8,8 @@ interface TodoStatusProps {
 
 export const TodoStatus = inject('todoStore')(
   observer(({ todoStore }: TodoStatusProps) => (
-    <small>Already achieved amount: {todoStore!.completedTasks || 0}</small>
+    <small data-testid="todo-status">
+      Already achieved amount: {todoStore!.completedTasks || 0}
+    </small>
   )),
 );
